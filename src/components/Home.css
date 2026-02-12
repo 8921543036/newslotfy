@@ -1,0 +1,111 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 80px;
+  background: #eee;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links .active {
+  font-weight: bold;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px;
+  min-height: 80vh;
+  background: #fff;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 64px;
+  color: #3b3bbf;
+}
+
+.category {
+  font-size: 20px;
+  margin: 20px 0 30px;
+}
+
+.book-btn {
+  padding: 14px 36px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #222;
+}
+
+/* IMAGE */
+.hero-right img {
+  width: 420px;
+  border-radius: 20px;
+}
+
+/* DOTS */
+.bottom-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.bottom-dots span {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bottom-dots .active {
+  width: 20px;
+  border-radius: 10px;
+  background: #000;
+}
