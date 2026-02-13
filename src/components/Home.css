@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: Georgia, serif;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,11 @@
 
 .nav-links li {
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-links li:hover {
+  opacity: 0.7;
 }
 
 .nav-links .active {
@@ -39,73 +44,162 @@
   display: flex;
   gap: 20px;
   cursor: pointer;
+  font-size: 18px;
 }
 
-/* HERO */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 80px 100px;
-  min-height: 80vh;
+  min-height: 85vh;
   background: #fff;
 }
 
+/* LEFT CONTENT */
 .hero-left {
   max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;   /* Perfect spacing */
 }
 
 .hero-left h1 {
-  font-size: 64px;
-  color: #3b3bbf;
+  font-size: 44px;
+  color: #000;
 }
 
-.category {
-  font-size: 20px;
-  margin: 20px 0 30px;
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
 }
 
+/* BUTTON */
 .book-btn {
   padding: 14px 36px;
   background: #000;
   color: #fff;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   cursor: pointer;
+  width: fit-content;
+  transition: 0.3s ease;
 }
 
 .book-btn:hover {
   background: #222;
+  transform: translateY(-2px);
 }
 
-/* IMAGE */
+/* RIGHT IMAGE */
 .hero-right img {
   width: 420px;
   border-radius: 20px;
+  transition: 0.4s ease;
 }
 
-/* DOTS */
-.bottom-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+.hero-right img:hover {
+  transform: scale(1.03);
+}
+
+/* ================= DOTS ================= */
+.dots {
+  margin-top: 30px;
   display: flex;
-  gap: 10px;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;
+  gap: 12px;
 }
 
-.bottom-dots span {
-  width: 10px;
-  height: 10px;
+.dot {
+  width: 12px;
+  height: 12px;
   background: #ccc;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-.bottom-dots .active {
-  width: 20px;
+.dot.active {
+  width: 28px;
   border-radius: 10px;
   background: #000;
+}
+
+/* ================= FOOTER ================= */
+.district-footer {
+  background: #111;
+  color: #fff;
+  padding: 50px 100px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footer-logo h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-qr img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-qr p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons span {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-icons span:hover {
+  color: #fff;
 }
