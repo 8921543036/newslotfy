@@ -1,9 +1,33 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+
 import hallImg from "./hall.jpg";
+import avtImg from "./avt.jpg";
+import iedcImg from "./iedc.jpg";
 
 export default function Home() {
   const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // All venue data in one array
+  const venues = [
+    {
+      title: "SEMINAR HALL",
+      category: "Seminar | Conference | Workshop",
+      image: hallImg,
+    },
+    {
+      title: "AVT",
+      category: "Auditorium | Events | Programs",
+      image: avtImg,
+    },
+    {
+      title: "IEDC ROOM",
+      category: "Meetings | Startup Talks | Hackathons",
+      image: iedcImg,
+    },
+  ];
 
   return (
     <>
@@ -28,8 +52,8 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-left">
-          <h1>SEMINAR HALL</h1>
-          <p className="category">Seminar | Conference | Workshop</p>
+          <h1>{venues[activeIndex].title}</h1>
+          <p className="category">{venues[activeIndex].category}</p>
 
           <button
             className="book-btn"
@@ -40,14 +64,21 @@ export default function Home() {
 
           {/* DOTS */}
           <div className="dots">
-            <span className="dot active"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
+            {venues.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${activeIndex === index ? "active" : ""}`}
+                onClick={() => setActiveIndex(index)}
+              ></span>
+            ))}
           </div>
         </div>
 
         <div className="hero-right">
-          <img src={hallImg} alt="Seminar Hall" />
+          <img
+            src={venues[activeIndex].image}
+            alt={venues[activeIndex].title}
+          />
         </div>
       </section>
     </>
